@@ -47,6 +47,7 @@ class SmsVerifyModel extends ActiveRecord
             ['sent_time', 'default', 'value' => time()],
             ['ip', 'ip'],
             ['ip', 'default', 'value' => \Yii::$app->request->getUserIP()],
+            ['expires_in', 'default', 'value' => $this->expires],
             ['mobile', 'check'],
             ['valid', 'boolean'],
             ['success', 'boolean'],
@@ -89,10 +90,10 @@ class SmsVerifyModel extends ActiveRecord
         return $this->findOne(['mobile' => $mobile, 'scenario' => $scenario]);
     }
 
-    public function isCodeValidate($mobile, $code, $scenario = '')
+    public static function isCodeValidate($mobile, $code, $scenario = '')
     {
-        $record = $this->findOne(compact('mobile', 'code', 'scenario'));
-        if ($record && $record->sent_time + $this->expires >= time()) {
+        $record = self::findOne(compact('mobile', 'code', 'scenario'));
+        if ($record && $record->sent_time + $record->expires_in >= time()) {
             return true;
         }
         return false;

@@ -18,6 +18,7 @@ class m171205_080935_create_table_verify_code extends Migration
             'ip' => $this->string(100)->notNull()->defaultValue('')->comment('IP 地址'),
             'code' => $this->string(15)->notNull()->comment('验证码'),
             'scenario' => $this->string(30)->defaultValue('')->comment('场景'),
+            'expires_in' => $this->integer()->unsigned()->comment('有效期'),
             'sent_time' => $this->bigInteger()->unsigned()->defaultValue(0)->comment('发送时间'),
             'success' => $this->smallInteger()->defaultValue(0)->comment('是否成功'),
             'remark' => $this->text()->comment('备注'),
