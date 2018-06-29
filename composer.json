@@ -1,6 +1,6 @@
 {
-    "name": "imdgr/yii2-uploader-qiniu",
-    "description": "file uploader for qiniu base on yii2 framework.",
+    "name": "imdgr/yii2-sms-verify-code",
+    "description": "",
     "license": "MIT",
     "authors": [
         {
