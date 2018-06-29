@@ -1,0 +1,16 @@
+{
+    "name": "imdgr/yii2-uploader-qiniu",
+    "description": "file uploader for qiniu base on yii2 framework.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "thrall.chen",
+            "email": "thrall.chen@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "2.0.15.1",
+        "yii2stack/validators": "^0.2.0",
+        "overtrue/easy-sms": "^1.1"
+    }
+}
