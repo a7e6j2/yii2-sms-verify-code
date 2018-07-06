@@ -8,7 +8,7 @@
 namespace imdgr\sms_verify;
 
 use yii\db\ActiveRecord;
-use yii2stack\validators\MobileValidator;
+use imdgr\validators\MobileValidator;
 
 class SmsVerifyModel extends ActiveRecord
 {
