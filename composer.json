@@ -10,7 +10,7 @@
     ],
     "require": {
         "yiisoft/yii2": "2.0.15.1",
-        "yii2stack/validators": "^0.2.0",
+        "imdgr/yii2-mobile-validator": "^0.1.1",
         "overtrue/easy-sms": "^1.1"
     }
 }
